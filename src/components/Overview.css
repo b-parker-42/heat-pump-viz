@@ -1,3 +1,5 @@
+/* Overview component styles - values align with theme.ts design system */
+
 .overview-container {
   padding: 20px;
   max-width: 1200px;
@@ -25,8 +27,9 @@
   gap: 40px;
 }
 
+/* Chart section styles - used by ReusableBarChart component */
 .chart-section {
-  background: white;
+  background: #ffffff;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -47,40 +50,6 @@
 
 .chart-wrapper {
   margin-top: 20px;
-}
-
-.data-note {
-  background: #e8f4f6;
-  border: 1px solid #bee5eb;
-  border-radius: 8px;
-  padding: 20px;
-  margin-top: 40px;
-  text-align: center;
-}
-
-.data-note p {
-  margin: 0;
-  color: #0c5460;
-}
-
-.loading-message {
-  text-align: center;
-  font-size: 18px;
-  color: #7f8c8d;
-  margin: 40px 0;
-}
-
-.error-message {
-  background: #fff3cd;
-  border: 1px solid #ffeaa7;
-  border-radius: 8px;
-  padding: 15px;
-  margin-bottom: 20px;
-  color: #856404;
-}
-
-.error-message p {
-  margin: 0;
 }
 
 /* Responsive design */
