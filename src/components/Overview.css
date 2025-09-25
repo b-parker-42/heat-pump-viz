@@ -1,0 +1,79 @@
+.overview-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.overview-container h1 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.overview-description {
+  text-align: center;
+  color: #7f8c8d;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+.charts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.chart-section {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chart-section h2 {
+  color: #34495e;
+  margin-bottom: 8px;
+  font-size: 24px;
+}
+
+.chart-description {
+  color: #7f8c8d;
+  margin-bottom: 20px;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.chart-wrapper {
+  margin-top: 20px;
+}
+
+.data-note {
+  background: #e8f4f6;
+  border: 1px solid #bee5eb;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.data-note p {
+  margin: 0;
+  color: #0c5460;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .overview-container {
+    padding: 10px;
+  }
+  
+  .chart-section {
+    padding: 15px;
+  }
+  
+  .chart-section h2 {
+    font-size: 20px;
+  }
+}
