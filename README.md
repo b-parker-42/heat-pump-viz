@@ -1,46 +1,167 @@
-# Getting Started with Create React App
+# Heat Pump Visualization Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based web application for visualizing UK heat pump deployment statistics with interactive charts and data visualization capabilities.
+
+## Overview
+
+This application provides an interactive dashboard to visualize quarterly heat pump installation data in the United Kingdom. It displays two main visualizations:
+
+1. **Quarterly Heat Pump Installations by Government Scheme** - Shows installations funded through BUS, ECO4, and other government schemes
+2. **Quarterly Heat Pump Installations by Heat Pump Type** - Displays installations by Air Source, Ground Source, Water Source, and Hybrid heat pump types
+
+## Prerequisites
+
+Before running this project, ensure you have the following installed:
+
+- **Node.js** (version 16.0 or higher recommended)
+- **npm** (comes with Node.js) or **yarn**
+
+To check if you have Node.js installed, run:
+```bash
+node --version
+npm --version
+```
+
+If you don't have Node.js installed, download it from [nodejs.org](https://nodejs.org/).
+
+## Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   cd heat-pump-viz
+   ```
+
+2. **Install all required dependencies:**
+   ```bash
+   npm install
+   ```
+
+   This will install all dependencies listed in `package.json`, including:
+   - React 19 with TypeScript support
+   - React Router DOM for navigation
+   - Recharts for interactive data visualization
+   - Testing libraries and development tools
+
+## Running the Application
+
+### Development Mode
+
+To start the development server:
+
+```bash
+npm start
+```
+
+- Opens [http://localhost:3000](http://localhost:3000) in your browser
+- The page automatically reloads when you make changes
+- Lint errors and warnings appear in the console
+
+### Production Build
+
+To create an optimized production build:
+
+```bash
+npm run build
+```
+
+- Creates a `build` folder with optimized static files
+- Files are minified and include cache-busting hashes
+- Ready for deployment to any static hosting service
+
+### Testing
+
+To run the test suite:
+
+```bash
+npm test
+```
+
+- Runs tests in interactive watch mode
+- Automatically runs tests when files change
+- Includes unit tests for components and functionality
+
+## Project Structure
+
+```
+heat-pump-viz/
+├── public/                 # Static files
+├── src/                   # Source code
+│   ├── components/        # React components
+│   │   ├── Overview.tsx   # Main dashboard component
+│   │   └── Overview.css   # Component styles
+│   ├── App.tsx           # Main application component
+│   ├── App.css           # Global styles
+│   └── index.tsx         # Application entry point
+├── data/                 # Data directory for Excel files
+│   └── README.md         # Data placement instructions
+├── package.json          # Dependencies and scripts
+└── README.md            # This file
+```
+
+## Data Integration
+
+The application is designed to work with Excel data files:
+
+1. **Place your Excel file** in the `/data/` directory
+2. **Expected filename**: `Heat_pump_deployment_quarterly_statistics_United_Kingdom_2025_Q2.xlsx`
+3. **Required Excel sheets**:
+   - **Table 1.1**: Quarterly Heat Pump installations by government scheme
+   - **Table 1.2**: Quarterly Heat Pump installations by Heat Pump type
+
+Currently, the application displays placeholder data that demonstrates the expected visualization format. Once the Excel file is added, data parsing functionality can be implemented to display real statistics.
 
 ## Available Scripts
 
-In the project directory, you can run:
+| Command | Description |
+|---------|-------------|
+| `npm start` | Runs the development server on http://localhost:3000 |
+| `npm test` | Runs the test suite in watch mode |
+| `npm run build` | Creates optimized production build |
+| `npm run eject` | Ejects from Create React App (irreversible) |
 
-### `npm start`
+## Dependencies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Main Dependencies
+- **React 19** - User interface library
+- **TypeScript** - Type-safe JavaScript
+- **React Router DOM** - Client-side routing
+- **Recharts** - Interactive chart library
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Development Dependencies
+- **React Scripts** - Build tools and configuration
+- **Testing Library** - Testing utilities
+- **ESLint** - Code linting
+- **TypeScript compiler** - Type checking
 
-### `npm test`
+## Browser Support
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This application supports all modern browsers:
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
-### `npm run build`
+## Troubleshooting
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Common Issues
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Node.js version errors**: Ensure you're using Node.js 16.0 or higher
+2. **npm install fails**: Try deleting `node_modules` and `package-lock.json`, then run `npm install` again
+3. **Port 3000 in use**: The development server will automatically try alternative ports
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Getting Help
 
-### `npm run eject`
+If you encounter issues:
+1. Check that all prerequisites are installed
+2. Ensure you're in the correct directory
+3. Try restarting the development server
+4. Clear browser cache if you see old content
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Development
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses TypeScript for type safety.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+For more information about Create React App features, see the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
