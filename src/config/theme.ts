@@ -1,41 +1,46 @@
 export const colors = {
-  // Primary colors
-  primary: '#2c3e50',
-  secondary: '#34495e',
-  accent: '#3498db',
+  // Primary color palette - Navy, Blue, Light Yellow
+  navy: '#1a2332',           // Dark navy blue (primary)
+  blue: '#4a90e2',           // Middle blue (secondary)
+  lightYellow: '#fef3c7',    // Light yellow (accent)
+  
+  // Semantic colors derived from palette
+  primary: '#1a2332',        // Navy
+  secondary: '#2d3e50',      // Slightly lighter navy
+  accent: '#4a90e2',         // Middle blue
   
   // Background colors
-  background: '#f8f9fa',
-  cardBackground: '#ffffff',
+  background: '#fef3c7',     // Light yellow for page background
+  cardBackground: '#ffffff', // White for cards
   
   // Text colors
-  textPrimary: '#2c3e50',
-  textSecondary: '#7f8c8d',
-  textMuted: '#95a5a6',
+  textPrimary: '#1a2332',    // Navy for primary text
+  textSecondary: '#2d3e50',  // Lighter navy for secondary text
+  textMuted: '#64748b',      // Muted gray-blue
   
-  // Chart colors
+  // Chart colors - using palette-derived colors
   chart: {
     // Government schemes
-    BUS: '#8884d8',
-    ECO4: '#82ca9d',
-    Other: '#ffc658',
+    BUS: '#4a90e2',          // Middle blue
+    ECO4: '#3b82f6',         // Brighter blue variation
+    Other: '#fbbf24',        // Golden yellow
     
     // Heat pump types
-    airSource: '#8884d8',
-    groundSource: '#82ca9d',
-    waterSource: '#ffc658',
-    hybrid: '#ff7300',
+    airSource: '#4a90e2',    // Middle blue
+    groundSource: '#3b82f6', // Brighter blue
+    waterSource: '#fbbf24',  // Golden yellow
+    hybrid: '#f59e0b',       // Amber
   },
   
   // Status colors
-  success: '#27ae60',
-  warning: '#f39c12',
-  error: '#e74c3c',
-  info: '#3498db',
+  success: '#10b981',        // Green (keeping standard)
+  warning: '#f59e0b',        // Amber/yellow
+  error: '#ef4444',          // Red (keeping standard)
+  info: '#4a90e2',           // Middle blue
   
   // Border and shadow colors
-  border: '#dee2e6',
-  shadow: 'rgba(0, 0, 0, 0.1)',
+  border: '#e2e8f0',         // Light gray-blue
+  shadow: 'rgba(26, 35, 50, 0.1)', // Navy with transparency
 } as const;
 
 export const spacing = {
@@ -49,15 +54,29 @@ export const spacing = {
 
 export const typography = {
   fontFamily: {
-    primary: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
+    primary: '"Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif',
     code: 'source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace',
   },
   fontSize: {
+    xs: 12,
     sm: 14,
-    md: 16,
-    lg: 18,
-    xl: 20,
-    xxl: 24,
+    base: 16,
+    md: 18,
+    lg: 20,
+    xl: 24,
+    xxl: 28,
+    xxxl: 32,
+  },
+  fontWeight: {
+    light: 300,
+    normal: 400,
+    bold: 700,
+    black: 900,
+  },
+  lineHeight: {
+    tight: 1.2,
+    normal: 1.5,
+    relaxed: 1.8,
   },
 } as const;
 
