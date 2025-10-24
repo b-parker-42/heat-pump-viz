@@ -82,6 +82,33 @@ const Overview: React.FC = () => {
           margins={chartDefaults.marginsWithLargeLegend}
         />
 
+          {/* Government Schemes Explainer Card */}
+          <div className="intro-section" style={{ marginBottom: 0 }}>
+            <h2>Government Schemes Explained</h2>
+            <p className="intro-description">
+              The UK’s heat pump market has been shaped by overlapping schemes. RHI built the early market, while BUS and ECO now lead growth. Stable, long-term policy and strong incentives are key to meeting future targets—like 600,000 installs per year by 2028. New regulations will further boost demand and supply.
+            </p>
+            <div className="heat-pump-types">
+              <div className="heat-pump-card">
+                <h3>ECO (Energy Company Obligation)</h3>
+                <p>
+                  ECO funds heat pumps for low-income and off-gas-grid homes. Since 2022, it has become a major driver, supporting about one-third of installations in 2024–25. ECO targets fuel-poor households and aligns energy efficiency with decarbonization.
+                </p>
+              </div>
+              <div className="heat-pump-card">
+                <h3>RHI (Renewable Heat Incentive, 2014–2022)</h3>
+                <p>
+                  RHI paid homeowners for renewable heat, setting the stage for heat pump uptake. The scheme closed in 2022 after supporting around 34,500 systems, but fell short of ambitious targets due to low tariffs, complexity, and low consumer awareness.
+                </p>
+              </div>
+              <div className="heat-pump-card">
+                <h3>BUS (Boiler Upgrade Scheme, 2022–present)</h3>
+                <p>
+                  BUS is the main current incentive, offering upfront grants (£7,500 from October 2023) for heat pump installation. BUS now drives about 60% of funded installs, with uptake surging after the grant increase.
+                </p>
+              </div>
+            </div>
+          </div>
         <ReusableBarChart
           data={governmentSchemeData}
           bars={governmentSchemeChartConfig.bars}
